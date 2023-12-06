@@ -65,8 +65,10 @@
             button22 = new Button();
             lblShowOps = new Label();
             lblHistoryDisplay = new Label();
+            panel5 = new Panel();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
+            panel5.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -434,6 +436,7 @@
             button3.TabIndex = 7;
             button3.Text = "½";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
@@ -451,7 +454,7 @@
             // 
             rtDisplayHistory.BackColor = Color.DimGray;
             rtDisplayHistory.BorderStyle = BorderStyle.None;
-            rtDisplayHistory.Location = new Point(729, 75);
+            rtDisplayHistory.Location = new Point(15, 62);
             rtDisplayHistory.Name = "rtDisplayHistory";
             rtDisplayHistory.Size = new Size(292, 692);
             rtDisplayHistory.TabIndex = 5;
@@ -462,7 +465,7 @@
             btnClearHistory.BackColor = Color.DimGray;
             btnClearHistory.ForeColor = Color.Black;
             btnClearHistory.Image = (Image)resources.GetObject("btnClearHistory.Image");
-            btnClearHistory.Location = new Point(980, 773);
+            btnClearHistory.Location = new Point(274, 760);
             btnClearHistory.Name = "btnClearHistory";
             btnClearHistory.Size = new Size(92, 52);
             btnClearHistory.TabIndex = 6;
@@ -500,7 +503,7 @@
             button22.BackColor = Color.DimGray;
             button22.FlatStyle = FlatStyle.Flat;
             button22.Image = (Image)resources.GetObject("button22.Image");
-            button22.Location = new Point(1047, 0);
+            button22.Location = new Point(340, 3);
             button22.Name = "button22";
             button22.Size = new Size(61, 48);
             button22.TabIndex = 8;
@@ -520,24 +523,33 @@
             // 
             lblHistoryDisplay.AutoSize = true;
             lblHistoryDisplay.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            lblHistoryDisplay.Location = new Point(718, 14);
+            lblHistoryDisplay.Location = new Point(4, 3);
             lblHistoryDisplay.Name = "lblHistoryDisplay";
             lblHistoryDisplay.Size = new Size(303, 48);
             lblHistoryDisplay.TabIndex = 10;
             lblHistoryDisplay.Text = "There`s no history";
+            // 
+            // panel5
+            // 
+            panel5.Controls.Add(rtDisplayHistory);
+            panel5.Controls.Add(lblHistoryDisplay);
+            panel5.Controls.Add(btnClearHistory);
+            panel5.Controls.Add(button22);
+            panel5.Location = new Point(702, 2);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(405, 823);
+            panel5.TabIndex = 11;
+            panel5.Visible = false;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
-            ClientSize = new Size(1109, 830);
-            Controls.Add(lblHistoryDisplay);
+            ClientSize = new Size(1117, 829);
+            Controls.Add(panel5);
             Controls.Add(lblShowOps);
-            Controls.Add(button22);
             Controls.Add(tableLayoutPanel2);
-            Controls.Add(btnClearHistory);
-            Controls.Add(rtDisplayHistory);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(panel4);
             Controls.Add(panel3);
@@ -550,6 +562,8 @@
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel2.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -592,5 +606,6 @@
         private Button button23;
         private Button button25;
         private Label lblHistoryDisplay;
+        private Panel panel5;
     }
 }

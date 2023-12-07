@@ -58,17 +58,19 @@
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
-            rtDisplayHistory = new RichTextBox();
-            btnClearHistory = new Button();
             tableLayoutPanel2 = new TableLayoutPanel();
             txtDisplay = new TextBox();
-            button22 = new Button();
             lblShowOps = new Label();
-            lblHistoryDisplay = new Label();
             panel5 = new Panel();
+            rtDisplayHistory = new RichTextBox();
+            lblHistoryDisplay = new Label();
+            btnClearHistory = new Button();
+            button22 = new Button();
+            tableLayoutPanel3 = new TableLayoutPanel();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel5.SuspendLayout();
+            tableLayoutPanel3.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -436,7 +438,6 @@
             button3.TabIndex = 7;
             button3.Text = "½";
             button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
             // 
             // button4
             // 
@@ -449,29 +450,6 @@
             button4.Text = "◀";
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
-            // 
-            // rtDisplayHistory
-            // 
-            rtDisplayHistory.BackColor = Color.DimGray;
-            rtDisplayHistory.BorderStyle = BorderStyle.None;
-            rtDisplayHistory.Location = new Point(15, 62);
-            rtDisplayHistory.Name = "rtDisplayHistory";
-            rtDisplayHistory.Size = new Size(292, 692);
-            rtDisplayHistory.TabIndex = 5;
-            rtDisplayHistory.Text = "";
-            // 
-            // btnClearHistory
-            // 
-            btnClearHistory.BackColor = Color.DimGray;
-            btnClearHistory.ForeColor = Color.Black;
-            btnClearHistory.Image = (Image)resources.GetObject("btnClearHistory.Image");
-            btnClearHistory.Location = new Point(274, 760);
-            btnClearHistory.Name = "btnClearHistory";
-            btnClearHistory.Size = new Size(92, 52);
-            btnClearHistory.TabIndex = 6;
-            btnClearHistory.UseVisualStyleBackColor = false;
-            btnClearHistory.Visible = false;
-            btnClearHistory.Click += btnClearHistory_Click;
             // 
             // tableLayoutPanel2
             // 
@@ -498,6 +476,59 @@
             txtDisplay.TabIndex = 1;
             txtDisplay.TextAlign = HorizontalAlignment.Right;
             // 
+            // lblShowOps
+            // 
+            lblShowOps.AutoSize = true;
+            lblShowOps.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            lblShowOps.Location = new Point(378, 62);
+            lblShowOps.Name = "lblShowOps";
+            lblShowOps.Size = new Size(0, 45);
+            lblShowOps.TabIndex = 9;
+            // 
+            // panel5
+            // 
+            panel5.Controls.Add(rtDisplayHistory);
+            panel5.Controls.Add(lblHistoryDisplay);
+            panel5.Controls.Add(btnClearHistory);
+            panel5.Controls.Add(button22);
+            panel5.Location = new Point(3, 3);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(405, 823);
+            panel5.TabIndex = 12;
+            // 
+            // rtDisplayHistory
+            // 
+            rtDisplayHistory.BackColor = Color.DimGray;
+            rtDisplayHistory.BorderStyle = BorderStyle.None;
+            rtDisplayHistory.Location = new Point(6, 75);
+            rtDisplayHistory.Name = "rtDisplayHistory";
+            rtDisplayHistory.Size = new Size(292, 692);
+            rtDisplayHistory.TabIndex = 5;
+            rtDisplayHistory.Text = "";
+            // 
+            // lblHistoryDisplay
+            // 
+            lblHistoryDisplay.AutoSize = true;
+            lblHistoryDisplay.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            lblHistoryDisplay.Location = new Point(6, 17);
+            lblHistoryDisplay.Name = "lblHistoryDisplay";
+            lblHistoryDisplay.Size = new Size(303, 48);
+            lblHistoryDisplay.TabIndex = 10;
+            lblHistoryDisplay.Text = "There`s no history";
+            // 
+            // btnClearHistory
+            // 
+            btnClearHistory.BackColor = Color.DimGray;
+            btnClearHistory.ForeColor = Color.Black;
+            btnClearHistory.Image = (Image)resources.GetObject("btnClearHistory.Image");
+            btnClearHistory.Location = new Point(304, 751);
+            btnClearHistory.Name = "btnClearHistory";
+            btnClearHistory.Size = new Size(92, 52);
+            btnClearHistory.TabIndex = 6;
+            btnClearHistory.UseVisualStyleBackColor = false;
+            btnClearHistory.Visible = false;
+            btnClearHistory.Click += btnClearHistory_Click;
+            // 
             // button22
             // 
             button22.BackColor = Color.DimGray;
@@ -508,38 +539,20 @@
             button22.Size = new Size(61, 48);
             button22.TabIndex = 8;
             button22.UseVisualStyleBackColor = false;
-            button22.Click += button22_Click;
+            button22.Click += button22_Click_1;
             // 
-            // lblShowOps
+            // tableLayoutPanel3
             // 
-            lblShowOps.AutoSize = true;
-            lblShowOps.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            lblShowOps.Location = new Point(378, 62);
-            lblShowOps.Name = "lblShowOps";
-            lblShowOps.Size = new Size(0, 45);
-            lblShowOps.TabIndex = 9;
-            // 
-            // lblHistoryDisplay
-            // 
-            lblHistoryDisplay.AutoSize = true;
-            lblHistoryDisplay.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            lblHistoryDisplay.Location = new Point(4, 3);
-            lblHistoryDisplay.Name = "lblHistoryDisplay";
-            lblHistoryDisplay.Size = new Size(303, 48);
-            lblHistoryDisplay.TabIndex = 10;
-            lblHistoryDisplay.Text = "There`s no history";
-            // 
-            // panel5
-            // 
-            panel5.Controls.Add(rtDisplayHistory);
-            panel5.Controls.Add(lblHistoryDisplay);
-            panel5.Controls.Add(btnClearHistory);
-            panel5.Controls.Add(button22);
-            panel5.Location = new Point(702, 2);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(405, 823);
-            panel5.TabIndex = 11;
-            panel5.Visible = false;
+            tableLayoutPanel3.ColumnCount = 1;
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.Controls.Add(panel5, 0, 0);
+            tableLayoutPanel3.Dock = DockStyle.Right;
+            tableLayoutPanel3.Location = new Point(706, 0);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 1;
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.Size = new Size(411, 829);
+            tableLayoutPanel3.TabIndex = 10;
             // 
             // Form1
             // 
@@ -547,7 +560,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
             ClientSize = new Size(1117, 829);
-            Controls.Add(panel5);
+            Controls.Add(tableLayoutPanel3);
             Controls.Add(lblShowOps);
             Controls.Add(tableLayoutPanel2);
             Controls.Add(tableLayoutPanel1);
@@ -558,12 +571,12 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Load += Form1_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel2.PerformLayout();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
+            tableLayoutPanel3.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -595,17 +608,18 @@
         private Button button3;
         private Button button2;
         private Button button1;
-        private RichTextBox rtDisplayHistory;
-        private Button btnClearHistory;
         private TableLayoutPanel tableLayoutPanel2;
         private TextBox txtDisplay;
-        private Button button22;
         private Label lblShowOps;
         private Button button19;
         private Button button24;
         private Button button23;
         private Button button25;
-        private Label lblHistoryDisplay;
         private Panel panel5;
+        private RichTextBox rtDisplayHistory;
+        private Label lblHistoryDisplay;
+        private Button btnClearHistory;
+        private Button button22;
+        private TableLayoutPanel tableLayoutPanel3;
     }
 }

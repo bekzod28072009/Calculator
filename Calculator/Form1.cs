@@ -30,11 +30,6 @@ namespace Calculator
             }
         }
 
-        private void button22_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void operations_Click(object sender, EventArgs e)
         {
             Button b = (Button)sender;
@@ -123,6 +118,11 @@ namespace Calculator
             }
         }
 
+        private void button22_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void btnClearHistory_Click(object sender, EventArgs e)
         {
             rtDisplayHistory.Clear();
@@ -132,16 +132,6 @@ namespace Calculator
             }
             btnClearHistory.Visible = false;
             rtDisplayHistory.ScrollBars = 0;
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

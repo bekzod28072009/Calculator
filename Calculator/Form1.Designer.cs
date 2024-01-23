@@ -465,14 +465,15 @@
             // 
             // txtDisplay
             // 
-            txtDisplay.BackColor = SystemColors.WindowFrame;
+            txtDisplay.BackColor = Color.Gray;
             txtDisplay.BorderStyle = BorderStyle.None;
             txtDisplay.Dock = DockStyle.Fill;
             txtDisplay.Font = new Font("Segoe UI", 30F, FontStyle.Regular, GraphicsUnit.Point);
-            txtDisplay.Location = new Point(3, 3);
+            txtDisplay.Location = new Point(0, 0);
+            txtDisplay.Margin = new Padding(0);
             txtDisplay.Multiline = true;
             txtDisplay.Name = "txtDisplay";
-            txtDisplay.Size = new Size(672, 137);
+            txtDisplay.Size = new Size(678, 143);
             txtDisplay.TabIndex = 1;
             txtDisplay.TextAlign = HorizontalAlignment.Right;
             // 

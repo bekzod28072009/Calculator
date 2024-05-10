@@ -133,5 +133,10 @@ namespace Calculator
             btnClearHistory.Visible = false;
             rtDisplayHistory.ScrollBars = 0;
         }
+
+        private void rtDisplayHistory_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

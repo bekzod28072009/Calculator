@@ -66,18 +66,16 @@
             lblHistoryDisplay = new Label();
             btnClearHistory = new Button();
             button22 = new Button();
-            tableLayoutPanel3 = new TableLayoutPanel();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel5.SuspendLayout();
-            tableLayoutPanel3.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(246, 159, 21);
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Location = new Point(1, 0);
+            panel1.Location = new Point(0, 8);
             panel1.Name = "panel1";
             panel1.Size = new Size(5, 823);
             panel1.TabIndex = 1;
@@ -85,7 +83,7 @@
             // panel2
             // 
             panel2.BackColor = Color.Black;
-            panel2.Location = new Point(11, 820);
+            panel2.Location = new Point(7, 820);
             panel2.Name = "panel2";
             panel2.Size = new Size(689, 5);
             panel2.TabIndex = 2;
@@ -93,9 +91,9 @@
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(246, 159, 21);
-            panel3.Location = new Point(5, 0);
+            panel3.Location = new Point(1, 2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(685, 5);
+            panel3.Size = new Size(689, 5);
             panel3.TabIndex = 3;
             // 
             // panel4
@@ -492,16 +490,16 @@
             panel5.Controls.Add(lblHistoryDisplay);
             panel5.Controls.Add(btnClearHistory);
             panel5.Controls.Add(button22);
-            panel5.Location = new Point(3, 3);
+            panel5.Location = new Point(706, 2);
             panel5.Name = "panel5";
-            panel5.Size = new Size(405, 823);
-            panel5.TabIndex = 12;
+            panel5.Size = new Size(302, 823);
+            panel5.TabIndex = 13;
             // 
             // rtDisplayHistory
             // 
             rtDisplayHistory.BackColor = Color.DimGray;
-            rtDisplayHistory.BorderStyle = BorderStyle.None;
-            rtDisplayHistory.Location = new Point(6, 75);
+            rtDisplayHistory.BorderStyle = BorderStyle.FixedSingle;
+            rtDisplayHistory.Location = new Point(10, 60);
             rtDisplayHistory.Name = "rtDisplayHistory";
             rtDisplayHistory.Size = new Size(292, 692);
             rtDisplayHistory.TabIndex = 5;
@@ -511,7 +509,8 @@
             // 
             lblHistoryDisplay.AutoSize = true;
             lblHistoryDisplay.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            lblHistoryDisplay.Location = new Point(6, 17);
+            lblHistoryDisplay.ForeColor = SystemColors.ButtonFace;
+            lblHistoryDisplay.Location = new Point(6, 6);
             lblHistoryDisplay.Name = "lblHistoryDisplay";
             lblHistoryDisplay.Size = new Size(303, 48);
             lblHistoryDisplay.TabIndex = 10;
@@ -522,46 +521,34 @@
             btnClearHistory.BackColor = Color.DimGray;
             btnClearHistory.ForeColor = Color.Black;
             btnClearHistory.Image = (Image)resources.GetObject("btnClearHistory.Image");
-            btnClearHistory.Location = new Point(304, 751);
+            btnClearHistory.Location = new Point(210, 763);
             btnClearHistory.Name = "btnClearHistory";
             btnClearHistory.Size = new Size(92, 52);
             btnClearHistory.TabIndex = 6;
             btnClearHistory.UseVisualStyleBackColor = false;
             btnClearHistory.Visible = false;
-            btnClearHistory.Click += btnClearHistory_Click;
             // 
             // button22
             // 
             button22.BackColor = Color.DimGray;
             button22.FlatStyle = FlatStyle.Flat;
-            button22.Image = (Image)resources.GetObject("button22.Image");
-            button22.Location = new Point(340, 3);
+            button22.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            button22.ForeColor = SystemColors.ButtonFace;
+            button22.Location = new Point(6, 763);
+            button22.Margin = new Padding(0);
             button22.Name = "button22";
-            button22.Size = new Size(61, 48);
+            button22.Size = new Size(191, 51);
             button22.TabIndex = 8;
+            button22.Text = "Exit";
             button22.UseVisualStyleBackColor = false;
-            button22.Click += button22_Click_1;
-            // 
-            // tableLayoutPanel3
-            // 
-            tableLayoutPanel3.ColumnCount = 1;
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel3.Controls.Add(panel5, 0, 0);
-            tableLayoutPanel3.Dock = DockStyle.Right;
-            tableLayoutPanel3.Location = new Point(706, 0);
-            tableLayoutPanel3.Name = "tableLayoutPanel3";
-            tableLayoutPanel3.RowCount = 1;
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel3.Size = new Size(411, 829);
-            tableLayoutPanel3.TabIndex = 10;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
-            ClientSize = new Size(1117, 829);
-            Controls.Add(tableLayoutPanel3);
+            ClientSize = new Size(1029, 829);
+            Controls.Add(panel5);
             Controls.Add(lblShowOps);
             Controls.Add(tableLayoutPanel2);
             Controls.Add(tableLayoutPanel1);
@@ -577,7 +564,6 @@
             tableLayoutPanel2.PerformLayout();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
-            tableLayoutPanel3.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -621,6 +607,5 @@
         private Label lblHistoryDisplay;
         private Button btnClearHistory;
         private Button button22;
-        private TableLayoutPanel tableLayoutPanel3;
     }
 }

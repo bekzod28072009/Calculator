@@ -118,12 +118,12 @@ namespace Calculator
             }
         }
 
-        private void button22_Click_1(object sender, EventArgs e)
+        private void rtDisplayHistory_TextChanged(object sender, EventArgs e)
         {
-            Application.Exit();
+
         }
 
-        private void btnClearHistory_Click(object sender, EventArgs e)
+        private void btnClearHistory_Click_1(object sender, EventArgs e)
         {
             rtDisplayHistory.Clear();
             if (lblHistoryDisplay.Text == "")
@@ -134,9 +134,9 @@ namespace Calculator
             rtDisplayHistory.ScrollBars = 0;
         }
 
-        private void rtDisplayHistory_TextChanged(object sender, EventArgs e)
+        private void button22_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
     }
 }

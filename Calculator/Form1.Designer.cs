@@ -521,12 +521,13 @@
             btnClearHistory.BackColor = Color.DimGray;
             btnClearHistory.ForeColor = Color.Black;
             btnClearHistory.Image = (Image)resources.GetObject("btnClearHistory.Image");
-            btnClearHistory.Location = new Point(210, 763);
+            btnClearHistory.Location = new Point(207, 763);
             btnClearHistory.Name = "btnClearHistory";
             btnClearHistory.Size = new Size(92, 52);
             btnClearHistory.TabIndex = 6;
             btnClearHistory.UseVisualStyleBackColor = false;
             btnClearHistory.Visible = false;
+            btnClearHistory.Click += btnClearHistory_Click_1;
             // 
             // button22
             // 
@@ -541,6 +542,7 @@
             button22.TabIndex = 8;
             button22.Text = "Exit";
             button22.UseVisualStyleBackColor = false;
+            button22.Click += button22_Click;
             // 
             // Form1
             // 
